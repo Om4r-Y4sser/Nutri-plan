@@ -1,9 +1,7 @@
 import appState from "./state/appState.js";
 
-import {
-    analyzeNutrition,
-    createIngredientList
-} from "./api/nutrition.js";
+import * as nutrition from "./Api/nutrition.js";
+
 
 import {
     renderCategories,
@@ -33,8 +31,8 @@ import {
     clearTodayFoodLog,
     renderWeeklyOverview
 } from "./foodlog.js";
-
 import * as mealdb from "./Api/mealdb.js";
+
 import * as productsApi from "./Api/productApi.js";
 
 setupNavigation();
