@@ -32,9 +32,9 @@ import {
     renderLoggedItems,
     clearTodayFoodLog,
     renderWeeklyOverview
-} from "./foodLog.js";
+} from "./foodlog.js";
 
-import * as mealdb from "./api/mealdb.js";
+import * as mealdb from "./Api/mealdb.js";
 import * as productsApi from "./Api/productApi.js";
 
 setupNavigation();
