@@ -1058,7 +1058,7 @@ export function setupLogMeal(getMealData, callback) {
     updateNutritionPreview(
         getMealData().nutrition
     );
-});k
+});
     cancelButton.addEventListener("click", () => {
 
         modal.classList.add("hidden");
