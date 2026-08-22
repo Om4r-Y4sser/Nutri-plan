@@ -1,120 +1,79 @@
-# NutriPlan - JavaScript Starter Project
+# NutriPlan - Frontend JavaScript Exam
 
-Welcome to the NutriPlan starter project! The design is fully complete - your task is to bring it to life with JavaScript.
+NutriPlan is a food, nutrition, and fitness planning web application developed as part of a comprehensive JavaScript examination. The project focuses on applying modern JavaScript concepts to build a dynamic, interactive, and API-driven web application.
 
-## 🎯 Project Overview
+## 🚀 Project Overview
 
-NutriPlan is a Food, Nutrition & Fitness Planner web application. The HTML and CSS are ready - you need to implement the JavaScript functionality.
+The application allows users to:
 
-## 📁 Project Structure
+- 🍽️ Explore meals from different categories and countries
+- 🔎 Search for meals using the integrated API
+- 📦 Search for food products by name or barcode
+- 📊 View nutritional information and calorie data
+- 📝 Add, edit, and delete consumed meals using CRUD operations
+- 📅 Track meals and nutrition throughout the week
+- 📈 Monitor weekly calorie and nutrition information
 
-```
-starter/
-├── index.html          # Main HTML file (ready)
-├── README.md           # This file
-└── src/
-    ├── css/
-    │   └── style.css   # Styles (ready)
-    └── js/
-        ├── main.js           # Entry point (implement here)
-        ├── api/
-        │   └── mealdb.js     # API module (implement here)
-        ├── state/
-        │   └── appState.js   # State management (implement here)
-        └── ui/
-            └── components.js  # UI components (implement here)
-```
+## 🛠️ Technologies & Concepts
 
-## 🚀 Getting Started
+- HTML5
+- CSS3
+- JavaScript ES6+
+- DOM Manipulation
+- Fetch API
+- REST API Integration
+- Asynchronous JavaScript
+- CRUD Operations
+- Local Storage
+- ES6 Modules
+- Dynamic UI Rendering
 
-1. Open `index.html` in your browser to see the design
-2. Start implementing the JavaScript files
-3. Begin with `src/js/api/mealdb.js` - fetch data from the API
-4. Then update `src/js/main.js` to load and display data
+## 🔗 APIs
 
-## 🔗 API Reference
+The project integrates external APIs to retrieve meal and product information.
 
-### TheMealDB API (Free, No API Key Required)
+### TheMealDB
 
-Base URL: `https://www.themealdb.com/api/json/v1/1/`
+Used for retrieving meals, categories, cuisines, and meal details.
 
-| Endpoint | Description | Example |
-|----------|-------------|---------|
-| `/categories.php` | Get all categories | [Try it](https://www.themealdb.com/api/json/v1/1/categories.php) |
-| `/search.php?s={query}` | Search meals by name | [Try it](https://www.themealdb.com/api/json/v1/1/search.php?s=chicken) |
-| `/lookup.php?i={id}` | Get meal by ID | [Try it](https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772) |
-| `/filter.php?c={category}` | Filter by category | [Try it](https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood) |
-| `/filter.php?a={area}` | Filter by area/cuisine | [Try it](https://www.themealdb.com/api/json/v1/1/filter.php?a=Italian) |
-| `/random.php` | Get random meal | [Try it](https://www.themealdb.com/api/json/v1/1/random.php) |
+### OpenFoodFacts
 
-## ✅ Tasks to Complete
+Used for searching food products by name or barcode and retrieving nutritional information.
 
-### Level 1: Basic Functionality
-- [ ] Fetch and display meal categories in `#categories-grid`
-- [ ] Fetch and display recipes in `#recipes-grid`
-- [ ] Hide the loading overlay when data is loaded
-- [ ] Update the recipe count text
+## 📌 Main Features
 
-### Level 2: Interactivity
-- [ ] Implement search functionality (use `#search-input`)
-- [ ] Filter recipes when clicking on a category
-- [ ] Show meal details when clicking on a recipe card
+### 🍴 Meal Explorer
 
-### Level 3: Navigation
-- [ ] Implement sidebar navigation between pages
-- [ ] Create different views (Meals, Products, Food Log)
+Users can browse and search for meals based on:
 
-### Level 4: Advanced Features
-- [ ] Add loading states while fetching data
-- [ ] Implement error handling for API calls
-- [ ] Save favorites to localStorage
+- Categories
+- Countries / cuisines
+- Meal names
 
-## 🎨 Key HTML Elements
+### 📦 Product Search
 
-### Meals Page
-| Element ID | Purpose |
-|------------|---------|
-| `#app-loading-overlay` | Loading screen (hide when ready) |
-| `#categories-grid` | Container for category cards |
-| `#recipes-grid` | Container for recipe cards |
-| `#search-input` | Search input field |
-| `#recipes-count` | Text showing recipe count |
+Users can search for products using:
 
-### Product Scanner Page
-| Element ID | Purpose |
-|------------|---------|
-| `#products-section` | Product scanner page container (toggle display) |
-| `#product-search-input` | Product name search input |
-| `#barcode-input` | Barcode number input |
-| `#search-product-btn` | Product search button |
-| `#lookup-barcode-btn` | Barcode lookup button |
-| `#products-grid` | Container for product cards |
-| `#products-count` | Text showing products count |
-| `.nutri-score-filter` | Nutri-Score filter buttons |
+- Product name
+- Barcode
 
-### Food Log Page
-| Element ID | Purpose |
-|------------|---------|
-| `#foodlog-section` | Food log page container (toggle display) |
-| `#foodlog-date` | Current date display |
-| `#foodlog-today-section` | Today's nutrition summary |
-| `#logged-items-list` | Container for logged food items |
-| `#weekly-chart` | Weekly chart container (Plotly) |
-| `#clear-foodlog` | Clear all logged items button |
-| `.quick-log-btn` | Quick action buttons |
+The application displays available nutritional information for the selected product.
 
-## 💡 Tips
+### 📅 Weekly Food Log
 
-1. **Start Simple**: First just fetch and log data to console
-2. **Use Modules**: The project uses ES6 modules (`type="module"`)
-3. **Check Console**: Look for TODO messages and errors
-4. **Inspect Design**: The skeleton loaders show the expected card layout
-5. **Navigation**: Use `style.display = "none"` or `style.display = ""` to show/hide sections
-6. **Page State**: Track current page in your app state for navigation
+Users can keep track of the meals they consume throughout the week.
 
-## 🔄 Navigation
+The food log includes information such as:
 
-To switch between pages, hide/show the relevant sections:
-- **Meals Page**: Show `#search-filters-section`, `#meal-categories-section`, `#all-recipes-section`
-- **Product Scanner**: Show `#products-section`
-- **Food Log**: Show `#foodlog-section`
+- Meal name
+- Calories
+- Nutritional information
+- Date consumed
+
+Users can also manage their records through CRUD functionality.
+
+## 🎯 Purpose
+
+The main goal of this project was to demonstrate a practical understanding of JavaScript by combining multiple concepts into a complete web application.
+
+Instead of implementing JavaScript concepts individually, the project uses them together to create a functional application with API communication, dynamic DOM manipulation, state management, CRUD operations, and interactive user interfaces.
